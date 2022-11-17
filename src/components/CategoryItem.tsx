@@ -12,15 +12,16 @@ type CategoryItemProps = {
 
 export const CategoryItem = ({ item, index, handleScrollToCategory }: CategoryItemProps) => {
   const { activeCategoryIndex, theme, setActiveCategoryIndex } = React.useContext(KeyboardContext)
-  if (item.icon === 'Search') <></>
+
   const handleSelect = () => {
     handleScrollToCategory(item.category)
     setActiveCategoryIndex(index)
   }
+  const style = item.icon === 'Search' ? styles.hidden : styles.container
 
   return (
     <TouchableOpacity onPress={handleSelect}>
-      <View style={styles.container}>
+      <View style={style}>
         <Icon
           iconName={item.icon}
           isActive={activeCategoryIndex === index}
@@ -33,6 +34,9 @@ export const CategoryItem = ({ item, index, handleScrollToCategory }: CategoryIt
 }
 
 const styles = StyleSheet.create({
+  hidden: {
+    position: 'absolute',
+  },
   container: {
     width: 28,
     height: 28,

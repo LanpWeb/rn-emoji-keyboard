@@ -36,6 +36,7 @@ export const CategoryItem = ({ item, index, handleScrollToCategory }: CategoryIt
 const styles = StyleSheet.create({
   hidden: {
     position: 'absolute',
+    zIndex: -1,
   },
   container: {
     width: 28,

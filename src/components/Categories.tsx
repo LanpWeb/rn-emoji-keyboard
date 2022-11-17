@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   separator: {
     width: 1,
     height: 28,
-    backgroundColor: '#00000011',
+    backgroundColor: 'transparent',
     marginHorizontal: 4,
   },
   activeIndicator: {

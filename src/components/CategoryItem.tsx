@@ -12,7 +12,7 @@ type CategoryItemProps = {
 
 export const CategoryItem = ({ item, index, handleScrollToCategory }: CategoryItemProps) => {
   const { activeCategoryIndex, theme, setActiveCategoryIndex } = React.useContext(KeyboardContext)
-
+  if (item.icon === 'Search') <></>
   const handleSelect = () => {
     handleScrollToCategory(item.category)
     setActiveCategoryIndex(index)

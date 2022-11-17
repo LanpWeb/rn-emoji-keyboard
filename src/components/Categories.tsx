@@ -108,6 +108,7 @@ export const Categories = () => {
     <View style={[categoryPosition === 'floating' && styles.floating]}>
       <View style={getStylesBasedOnPosition()}>
         <FlatList
+          scrollEnabled={false}
           data={renderData}
           keyExtractor={(item) => item.category}
           renderItem={renderItem}

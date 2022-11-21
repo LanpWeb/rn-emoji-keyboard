@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     height: 28,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 3,
+    padding: 6,
     borderRadius: 6,
   },
   icon: { textAlign: 'center' },

@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     width: 1,
     height: 28,
     backgroundColor: 'transparent',
-    marginHorizontal: 4,
+    marginHorizontal: 7,
   },
   activeIndicator: {
     position: 'absolute',

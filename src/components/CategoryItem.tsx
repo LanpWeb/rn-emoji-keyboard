@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableWithoutFeedback } from 'react-native'
 import { KeyboardContext } from '../contexts/KeyboardContext'
 import type { CategoryNavigationItem, CategoryTypes } from '../types'
 import { Icon } from './Icon'
@@ -20,7 +20,7 @@ export const CategoryItem = ({ item, index, handleScrollToCategory }: CategoryIt
   const style = item.icon === 'Search' ? styles.hidden : styles.container
 
   return (
-    <TouchableOpacity onPress={handleSelect}>
+    <TouchableWithoutFeedback onPress={handleSelect}>
       <View style={style}>
         <Icon
           iconName={item.icon}
@@ -29,7 +29,7 @@ export const CategoryItem = ({ item, index, handleScrollToCategory }: CategoryIt
           activeColor={theme.category.iconActive}
         />
       </View>
-    </TouchableOpacity>
+    </TouchableWithoutFeedback>
   )
 }
 
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     height: 28,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 6,
+    padding: 3,
     borderRadius: 6,
   },
   icon: { textAlign: 'center' },
